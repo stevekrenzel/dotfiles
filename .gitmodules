@@ -37,3 +37,7 @@
 [submodule "vim-tbone"]
   path = .vim/bundle/vim-tbone
   url = https://github.com/tpope/vim-tbone.git
+
+[submodule "gundo.vim"]
+  path = .vim/bundle/gundo.vim
+  url = https://github.com/sjl/gundo.vim.git

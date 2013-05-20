@@ -13,6 +13,7 @@ set nowrap
 "set background=light
 "colorscheme solarized
 colorscheme desert
+set enc=utf-8
 
 "Delete entire words
 map <bs> bdw
@@ -28,7 +29,10 @@ set showmatch
 set incsearch
 set ignorecase
 set smartcase
-set scrolloff=4
+set scrolloff=10
+
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 map Q gq
 
@@ -65,11 +69,6 @@ set showbreak=↳
 set ar
 
 set completeopt+=longest
-set guioptions-=r
-set guioptions-=R
-set guioptions-=l
-set guioptions-=L
-set guifont=Menlo:h13
 
 " Smart file openning
 map <leader>r :ruby @finder = nil<CR>
@@ -132,7 +131,7 @@ nmap <leader>0 :call ToggleColorColumn()<cr>
 
 set nocul " Don't highlight current line
 set lazyredraw
-set noerrorbells
+set noerrorbells visualbell t_vb=
 
 " Much of below is from: https://github.com/tpope/tpope/blob/master/.vimrc
 set dictionary+=/usr/share/dict/words
@@ -155,6 +154,24 @@ if !has("gui_running") && $DISPLAY == '' || !has("gui")
   set mouse=
 endif
 
+if has('gui_running')
+    set guioptions-=r
+    set guioptions-=R
+    set guioptions-=l
+    set guioptions-=L
+    set guifont=Menlo:h13
+    let s:uname = system("echo -n \"$(uname)\"")
+    if !v:shell_error && s:uname == "Linux"
+      set guifont="Bitstream\ Vera\ Sans\ Mono\ 12"
+    end
+    set guioptions-=m  "remove menu bar
+    set guioptions-=T  "remove toolbar
+    autocmd GUIEnter * set visualbell t_vb=
+end
+
+set mousehide
+set backspace=indent,eol,start
+
 if $TERM =~ '^screen'
   if exists("+ttymouse") && &ttymouse == ''
     set ttymouse=xterm
@@ -170,3 +187,8 @@ endif
 
 set splitbelow
 set splitright
+
+nnoremap ; :
+nnoremap <leader>: ;
+vnoremap ; :
+vnoremap <leader>: ;
