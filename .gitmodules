@@ -1,0 +1,39 @@
+[submodule "ack.vim"]
+  path = .vim/bundle/ack.vim
+  url = https://github.com/mileszs/ack.vim.git
+
+[submodule "ctrlp.vim"]
+  path = .vim/bundle/ctrlp.vim
+  url = https://github.com/kien/ctrlp.vim.git
+
+[submodule "nerdtree"]
+  path = .vim/bundle/nerdtree
+  url = https://github.com/scrooloose/nerdtree.git
+
+[submodule "vim-classpath"]
+  path = .vim/bundle/vim-classpath
+  url = git://github.com/tpope/vim-classpath.git
+
+[submodule "vim-clojure-static"]
+  path = .vim/bundle/vim-clojure-static
+  url = git://github.com/guns/vim-clojure-static.git
+
+[submodule "vim-easymotion"]
+  path = .vim/bundle/vim-easymotion
+  url = https://github.com/Lokaltog/vim-easymotion.git
+
+[submodule "vim-fireplace"]
+  path = .vim/bundle/vim-fireplace
+  url = git://github.com/tpope/vim-fireplace.git
+
+[submodule "vim-sensible"]
+  path = .vim/bundle/vim-sensible
+  url = git://github.com/tpope/vim-sensible.git
+
+[submodule "vim-surround"]
+  path = .vim/bundle/vim-surround
+  url = https://github.com/tpope/vim-surround.git
+
+[submodule "vim-tbone"]
+  path = .vim/bundle/vim-tbone
+  url = https://github.com/tpope/vim-tbone.git

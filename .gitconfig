@@ -1,0 +1,17 @@
+[user]
+	name = Steve Krenzel
+	email = sgk284@gmail.com
+[core]
+	excludesfile = /Users/steve/.gitignore
+	editor = mvim -f
+[color]
+	ui = true
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+  lol = log --oneline --decorate --graph
+  lal = log --oneline --decorate --graph --all
+  stat = status
+  fetchp = fetch -p
