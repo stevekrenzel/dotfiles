@@ -81,10 +81,9 @@ map <leader>a :Ack
 map <leader>p :CtrlPCurWD<CR>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.png,*.jpg,*.gif,*bmp,*.o,*.class,obj,*.sassc
 
-" Fuzzy Finder
-map <leader>f :FuzzyFinderTextMate <CR>
-map <leader>r :ruby @finder = nil<CR>
-let g:fuzzy_ignore = "*.pyc;*.png;*.jpg;*.gif;*bmp;*.css;*.o;*.class;obj;*.sassc;*.js"
+" Go Helpers
+map <leader>fo :!gofmt -w=true -tabs=false -tabwidth=2 %<CR><CR>
+map <leader>r :!go run %<CR>
 
 " Nerd Tree
 map <leader>n :NERDTreeToggle<CR>
